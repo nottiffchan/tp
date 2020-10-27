@@ -15,7 +15,7 @@ import trackitnus.ui.UiPart;
  */
 public class ContactCard extends UiPart<Region> {
 
-    private static final String FXML = "ContactListCard.fxml";
+    private static final String FXML = "/Contact/ContactListCard.fxml";
 
     /**
      * Note: Certain keywords such as "location" and "resources" are reserved keywords in JavaFX.
@@ -46,7 +46,7 @@ public class ContactCard extends UiPart<Region> {
     public ContactCard(Contact contact, int displayedIndex) {
         super(FXML);
         this.contact = contact;
-        id.setText(displayedIndex + ". ");
+        id.setText("[" + displayedIndex + "] ");
         name.setText(contact.getName().fullName);
         phone.setText(contact.getPhone().value);
         email.setText(contact.getEmail().value);

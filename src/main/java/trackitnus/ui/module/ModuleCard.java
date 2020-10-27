@@ -12,7 +12,7 @@ import trackitnus.ui.UiPart;
  */
 public class ModuleCard extends UiPart<Region> {
 
-    private static final String FXML = "ModuleListCard.fxml";
+    private static final String FXML = "/Module/ModuleListCard.fxml";
 
     /**
      * Note: Certain keywords such as "location" and "resources" are reserved keywords in JavaFX.
@@ -28,21 +28,18 @@ public class ModuleCard extends UiPart<Region> {
     private HBox cardPane;
     @FXML
     private Label code;
-    @FXML
-    private Label name;
-    @FXML
-    private Label id;
+//    @FXML
+//    private Label name;
 
 
     /**
      * Creates a {@code ModuleCard} with the given {@code Module} and index to display.
      */
-    public ModuleCard(Module module, int displayedIndex) {
+    public ModuleCard(Module module) {
         super(FXML);
         this.module = module;
-        id.setText(displayedIndex + ". ");
         code.setText(module.getCode().code);
-        name.setText(module.getName().fullName);
+//        name.setText(module.getName().fullName);
     }
 
     @Override
@@ -59,7 +56,6 @@ public class ModuleCard extends UiPart<Region> {
 
         // state check
         ModuleCard card = (ModuleCard) other;
-        return id.getText().equals(card.id.getText())
-            && module.equals(card.module);
+        return module.equals(card.module);
     }
 }

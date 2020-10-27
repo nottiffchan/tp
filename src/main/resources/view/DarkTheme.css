@@ -1,91 +1,63 @@
 @font-face {
-    font-family: "Quicksand";
-    src: url("/fonts/Quicksand-Regular.ttf");
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
-    font-family: "QuicksandBold";
-    src: url("/fonts/Quicksand-Bold.ttf");
+    font-family: "PoppinsSemiBold";
+    src: url("/fonts/Poppins-SemiBold.ttf");
 }
 
 @font-face {
-    font-family: "Baloo";
-    src: url("/fonts/Baloo2-ExtraBold.ttf");
+    font-family: "PoppinsBold";
+    src: url("/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "PoppinsBlack";
+    src: url("/fonts/Poppins-Black.ttf");
 }
 
 .background {
-    -fx-background-color: #313543;
-    background-color: #313543;
+    -fx-background-color: #434754;
+    background-color: #434754;
 }
 
 .label {
     -fx-font-size: 10pt;
-    -fx-font-family: "Quicksand";
-    -fx-text-fill: #555555;
+    -fx-font-family: "Poppins";
+    -fx-text-fill: white;
     -fx-opacity: 0.9;
 }
 
 .label-bright {
     -fx-font-size: 11pt;
-    -fx-font-family: "Quicksand";
+    -fx-font-family: "Poppins";
     -fx-text-fill: white;
     -fx-opacity: 1;
 }
 
 .label-header {
     -fx-font-size: 32pt;
-    -fx-font-family: "Quicksand";
+    -fx-font-family: "Poppins";
     -fx-text-fill: white;
     -fx-opacity: 1;
 }
 
 .text-field {
     -fx-font-size: 12pt;
-    -fx-font-family: 'Quicksand';
+    -fx-font-family: 'Poppins';
 }
 
-.tab-pane {
-    -fx-background-color: #232c3d;
-    -fx-tab-min-height: 3em;
-    -fx-tab-max-height: 3em;
-    -fx-tab-min-width: 8em;
-}
-
-#tabPane .tab:selected .focus-indicator {
-    -fx-border-color: #E6B918 #E6B918 transparent #E6B918;
-}
-
-#tabPane .tab:selected .tab-label {
-    -fx-text-fill: #E6B918;
-}
-
-.tab-pane .tab-header-area {
-    -fx-background-color: #313543;
-    -fx-padding: 0 0 0 0;
-    -fx-min-height: 0;
-    -fx-max-height: 0;
-}
-
-.tab-pane .tab-header-area .tab {
-    -fx-background-color: #313543;
-}
-
-.tab-pane .tab-header-area .tab-header-background {
-    -fx-background-color: #313543;
-    -fx-opacity: 0.9;
-}
-
-.tab-pane .tab-header-area .tab .tab-label {
-    -fx-font-size: 13pt;
-    -fx-font-family: "Quicksand";
-    -fx-text-fill: white;
-    -fx-opacity: 0.9;
+.side-panel {
+    -fx-background-color: #313543!important;
+    -fx-padding: 0px!important;
 }
 
 .table-view {
-    -fx-base: #313543;
-    -fx-control-inner-background: #313543;
-    -fx-background-color: #313543;
+    -fx-base: #434754;
+    -fx-control-inner-background: #434754;
+    -fx-background-color: #434754;
     -fx-table-cell-border-color: transparent;
     -fx-table-header-border-color: transparent;
 }
@@ -104,7 +76,7 @@
 
 .table-view .column-header .label {
     -fx-font-size: 20pt;
-    -fx-font-family: "Quicksand";
+    -fx-font-family: "Poppins";
     -fx-text-fill: white;
     -fx-alignment: center-left;
     -fx-opacity: 1;
@@ -125,35 +97,43 @@
 
 .list-view {
     -fx-background-insets: 0;
-    -fx-background-color: #59687C;
-    -fx-background-radius: 10;
+    -fx-background-color: #434754;
+}
+
+.lesson-list-view {
+    -fx-background-insets: 0;
+    -fx-background-color: #62687A;
+    -fx-background-radius: 5;
 }
 
 .list-cell {
-    -fx-background-color: #59687C;
-    -fx-background-radius: 10;
+    -fx-background-color: transparent;
 }
 
-.list-cell:filled:even {
-    -fx-background-color: #7A8AA0;
+#tabContainer {
+    -fx-background-color: #434754;
 }
 
-.list-cell:filled:odd {
-    -fx-background-color: #4E5F78;
-}
-
-.list-cell:filled:selected #cardPane {
-    /*-fx-border-color: #000000;*/
-    /*-fx-background-color: #000000;*/
-}
-
-.list-cell:filled:selected .label {
-    -fx-text-fill: #E6B918;
+#modulePanel {
+    -fx-background-color: #434754;
 }
 
 .module_big_label {
-    -fx-font-family: "QuicksandBold";
+    -fx-font-family: "Poppins";
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+    -fx-wrap-text: true;
+}
+
+.date_label {
+    -fx-font-family: "Poppins";
+    -fx-font-weight: bold;
     -fx-font-size: 17px;
+}
+
+.module_small_label {
+    -fx-font-family: "Poppins";
+    -fx-font-size: 15px;
 }
 
 .list-cell .label {
@@ -161,45 +141,45 @@
 }
 
 .cell_big_label {
-    -fx-font-family: "Quicksand";
+    -fx-font-family: "Poppins";
     -fx-font-size: 13px;
     -fx-text-fill: #010504;
 }
 
 .cell_small_label {
-    -fx-font-family: "Quicksand";
-    -fx-font-size: 10px;
+    -fx-font-family: "Poppins";
+    -fx-font-size: 11px;
     -fx-text-fill: #010504;
 }
 
 .stack-pane {
-    -fx-background-color: #313543;
+    -fx-background-color: #434754;
 }
 
 .pane-with-border {
-    -fx-background-color: #313543;
-    -fx-border-color: #313543;
+    -fx-background-color: #434754;
+    -fx-border-color: #434754;
     -fx-border-top-width: 1px;
+    -fx-padding: 5 10 5 5;
 }
 
 .status-bar {
-    -fx-background-color: #313543;
+    -fx-background-color: #434754;
 }
 
 .result-display {
-    -fx-background-color: transparent;
-    -fx-font-family: "Quicksand";
+    -fx-background-color: #8C8C89;
+    -fx-font-family: "Poppins";
     -fx-font-size: 11pt;
     -fx-text-fill: white;
     -fx-wrap-text: true;
 }
 
 .result-container {
-    -fx-background-color: #59687C;
+    -fx-background-color: #8C8C89;
     -fx-background-radius: 5, 5, 5, 5;
     -fx-border-radius: 5, 5, 5, 5;
     -fx-padding: 0 0 0 0;
-    -fx-border-color: #44495B;
 }
 
 .result-display .label {
@@ -207,7 +187,7 @@
 }
 
 .status-bar .label {
-    -fx-font-family: "Quicksand";
+    -fx-font-family: "Poppins";
     -fx-text-fill: white;
     -fx-padding: 4px;
     -fx-pref-height: 20px;
@@ -224,90 +204,57 @@
 }
 
 .item-pane {
-    -fx-background-color: #313543;
+    -fx-background-color: #434754;
 }
 
 .grid-pane {
-    -fx-background-color: #313543;
+    -fx-background-color: #434754;
 }
 
 .grid-pane .stack-pane {
-    -fx-background-color: #313543;
+    -fx-background-color: #434754;
 }
 
 .context-menu {
-    -fx-background-color: #313543;
+    -fx-background-color: #434754;
 }
 
 .context-menu .label {
     -fx-text-fill: white;
 }
 
-.menu-bar {
-    -fx-background-color: #313543;
-}
-
-.menu-bar .label {
-    -fx-font-size: 14pt;
-    -fx-font-family: "Quicksand";
-    -fx-text-fill: white;
-    -fx-opacity: 0.9;
-}
-
-.menu .left-container {
-    -fx-background-color: black;
-}
-
-/*
- * Metro style Push Button
- * Author: Pedro Duque Vieira
- * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
- */
 .button {
-    -fx-padding: 5 22 5 22;
-    -fx-border-color: #e2e2e2;
-    -fx-border-width: 2;
-    -fx-background-radius: 0;
-    -fx-background-color: #1d1d1d;
-    -fx-font-family: "Quicksand", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
+    -fx-background-color: transparent;
+    -fx-font-family: "Poppins";
+    -fx-font-weight: bold;
+    -fx-font-size: 13pt;
     -fx-text-fill: #d8d8d8;
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
 
 .button:hover {
-    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #68C2E8;
 }
 
 .button:pressed, .button:default:hover:pressed {
-    -fx-background-color: white;
-    -fx-text-fill: #1d1d1d;
 }
 
 .button:focused {
-    -fx-border-color: white, white;
-    -fx-border-width: 1, 1;
-    -fx-border-style: solid, segments(1, 1);
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 1 1 1 1, 0;
-}
-
-.button:disabled, .button:default:disabled {
-    -fx-opacity: 0.4;
-    -fx-background-color: #1d1d1d;
-    -fx-text-fill: white;
+    -fx-font-family: "Poppins";
+    -fx-font-weight: bold;
 }
 
 .command-box-label {
-    -fx-background-color: #313543;
+    -fx-background-color: #434754;
     -fx-text-fill: white;
-    -fx-font-family: "Quicksand";
+    -fx-font-family: "Poppins";
     -fx-font-size: 12pt;
 }
 
 .button:default {
     -fx-background-color: -fx-focus-color;
     -fx-text-fill: #ffffff;
+    -fx-font-family: "Poppins";
+    -fx-font-weight: bold;
 }
 
 .button:default:hover {
@@ -340,11 +287,11 @@
 }
 
 .scroll-bar {
-    -fx-background-color: #59687C;
+    -fx-background-color: #5D606C;
 }
 
 .scroll-bar .thumb {
-    -fx-background-color: #7A8AA0;
+    -fx-background-color: #3D3F45;
     -fx-background-insets: 3;
 }
 
@@ -376,16 +323,19 @@
 }
 
 #commandTextField {
-    -fx-background-color: #454B5F;
+    -fx-background-color: #8C8C89;
     -fx-background-radius: 5, 5, 5, 5;
-    -fx-font-family: "Quicksand";
+    -fx-font-family: "Poppins";
     -fx-font-size: 13pt;
     -fx-text-fill: white;
 }
 
+#resultDisplay {
+    -fx-background-radius: 5;
+}
+
 #resultDisplay .content {
-    /*-fx-background-color: #59687C;*/
-    -fx-background-color: #44495B;
+    -fx-background-color: #8C8C89;
 }
 
 #tags {

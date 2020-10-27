@@ -1,9 +1,12 @@
 package trackitnus.ui.module;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.logging.Logger;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Region;
@@ -42,9 +45,18 @@ public class ModuleListPanel extends UiPart<Region> {
                 setGraphic(null);
                 setText(null);
             } else {
-                setGraphic(new ModuleCard(module, getIndex() + 1).getRoot());
+                setGraphic(getModuleButton(module));
             }
         }
+    }
+
+    public Button getModuleButton(Module module) {
+        Button button = new Button(module.getCode().code);
+        ArrayList<Object> moduleValues = new ArrayList<>(Arrays.asList((Object) Module.TYPE, (Object) module));
+//        button.setOnAction(actionEvent -> {
+//            tabConsumer.accept(moduleValues);
+//        });
+        return button;
     }
 
 }

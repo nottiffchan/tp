@@ -15,7 +15,7 @@ import trackitnus.ui.UiPart;
  * Panel containing the list of lessons.
  */
 public class LessonListPanel extends UiPart<Region> {
-    private static final String FXML = "LessonListPanel.fxml";
+    private static final String FXML = "/Lesson/LessonListPanel.fxml";
     private final Logger logger = LogsCenter.getLogger(LessonListPanel.class);
 
     @FXML

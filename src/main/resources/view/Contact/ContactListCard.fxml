@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
@@ -12,7 +13,7 @@
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10" prefWidth="150"/>
         </columnConstraints>
-        <VBox alignment="CENTER_LEFT" minHeight="75" GridPane.columnIndex="0">
+        <VBox alignment="CENTER_LEFT" GridPane.columnIndex="0">
             <padding>
                 <Insets top="1" right="5" bottom="1" left="15"/>
             </padding>
@@ -23,12 +24,11 @@
                         <Region fx:constant="USE_PREF_SIZE"/>
                     </minWidth>
                 </Label>
-                <Label fx:id="name" text="\$name" styleClass="cell_big_label"/>
+                <Label fx:id="name" text="\$first" styleClass="cell_big_label"/>
+                <Label fx:id="phone" styleClass="cell_small_label" text="\$phone"/>
+                <Label fx:id="email" styleClass="cell_small_label" text="\$email"/>
             </HBox>
-            <Label fx:id="address" styleClass="cell_small_label" text="\$address"/>
-            <Label fx:id="remark" styleClass="cell_small_label" text="\$remark"/>
-            <Label fx:id="date" styleClass="cell_small_label" text="\$date"/>
-            <Label fx:id="weightage" styleClass="cell_small_label" text="\$weightage"/>
+            <FlowPane fx:id="tags"/>
         </VBox>
     </GridPane>
 </HBox>

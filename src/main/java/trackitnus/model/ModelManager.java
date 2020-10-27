@@ -243,6 +243,7 @@ public class ModelManager implements Model {
             throw new CommandException(Messages.MESSAGE_TASK_DOES_NOT_EXIST);
         }
         return Index.fromZeroBased(index);
+//        return index;
     }
 
     //=========== Lesson ================================================================================
@@ -286,8 +287,6 @@ public class ModelManager implements Model {
     @Override
     public void updateFilteredLessonList(Predicate<Lesson> predicate) {
         requireNonNull(predicate);
-        System.out.println(filteredLessons.size());
-        System.out.println(filteredLessons.get(0).getType());
         filteredLessons.setPredicate(predicate);
     }
 

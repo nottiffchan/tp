@@ -15,7 +15,7 @@ import trackitnus.ui.UiPart;
  * Panel containing the list of contacts.
  */
 public class ContactListPanel extends UiPart<Region> {
-    private static final String FXML = "ContactListPanel.fxml";
+    private static final String FXML = "/Contact/ContactListPanel.fxml";
     private final Logger logger = LogsCenter.getLogger(ContactListPanel.class);
 
     @FXML

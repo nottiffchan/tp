@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 import javafx.collections.ObservableList;
 import trackitnus.commons.core.GuiSettings;
 import trackitnus.commons.core.LogsCenter;
+import trackitnus.commons.core.index.Index;
 import trackitnus.logic.commands.Command;
 import trackitnus.logic.commands.CommandResult;
 import trackitnus.logic.commands.exceptions.CommandException;
@@ -108,15 +109,22 @@ public class LogicManager implements Logic {
     @Override
     public ObservableList<Lesson> getModuleLessons(Code code) {
         Predicate<Lesson> predicate = lesson -> (lesson.getCode().equals(code));
-        model.updateFilteredLessonList(predicate);
-        return model.getFilteredLessonList();
+//        model.updateFilteredLessonList(predicate);
+//        return model.getFilteredLessonList();
+        return model.getFilteredLessonList().filtered(predicate);
     }
 
     @Override
     public ObservableList<Task> getModuleTasks(Code code) {
         Predicate<Task> p = task -> task.belongsToModule(code);
-        model.updateFilteredTaskList(p);
-        return model.getFilteredTaskList();
+//        model.updateFilteredTaskList(p);
+//        return model.getFilteredTaskList();
+        return model.getFilteredTaskList().filtered(p);
+    }
+
+    @Override
+    public ObservableList<Contact> getModuleContacts(Code code) {
+        return model.getFilteredContactList();
     }
 
     @Override
@@ -129,6 +137,11 @@ public class LogicManager implements Logic {
     public ObservableList<Task> getDayUpcomingTasks(LocalDate date) {
         Predicate<Task> p = task -> task.getDate().equals(date);
         return model.getFilteredTaskList().filtered(p);
+    }
+
+    @Override
+    public Index getTaskIndex(Task task) throws CommandException {
+        return model.getTaskIndex(task);
     }
 
     //--------------------------------END of V1.3's new functions--------------------------------

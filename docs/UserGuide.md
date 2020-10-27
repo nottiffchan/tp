@@ -90,7 +90,7 @@ What are you waiting for? Head on to [Section 2, **Quick Start**](#quick-start) 
 
 :information_source: An **Edit** command will edit a module/lesson/task/contact. Relevant parameters (see [Features
 ](#features) for more info) must be present. All parameters that are not specified will **remain unchanged**.
-  
+
 :information_source: A **Delete** command will delete a module/lesson/task/contact. Relevant parameters (see [Features](#features) for more info) must be present.
 
 --------------------------------------------------------------------------------------------------------------------
@@ -99,7 +99,7 @@ What are you waiting for? Head on to [Section 2, **Quick Start**](#quick-start) 
 
 ![Module](images/Module.png)
 
-A sample of CS2030's module page in TrackIt@NUS. The relevant lessons, tasks, and contacts are all shown as well. 
+A sample of CS2030's module page in TrackIt@NUS. The relevant lessons, tasks, and contacts are all shown as well.
 
 :information_source: Lessons, tasks, and contacts are all linked closely to a module
 
@@ -245,7 +245,7 @@ Examples:
 
 Remark: The `INDEX` provided must be positive and cannot be larger than the number of Contacts. At least 1
  field must be provided for editing. i.e. `C edit 1` is not allowed.
- 
+
 :warning: When editing tags, existing tags of contact will be removed (i.e. adding tags is not cumulative)
 
 :bulb: Can remove all tags by typing t/ without any tags following it

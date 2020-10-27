@@ -10,6 +10,7 @@ public class Messages {
     public static final String MESSAGE_INVALID_CONTACT_DISPLAYED_INDEX = "The contact index provided is invalid";
     public static final String MESSAGE_INVALID_TASK_DISPLAYED_INDEX = "The task index provided is invalid";
     public static final String MESSAGE_INVALID_TYPE = "The type provided is invalid";
+    public static final String MESSAGE_INVALID_TAB_VALUE = "Invalid tab values.";
     public static final String MESSAGE_CONTACTS_LISTED_OVERVIEW = "%1$d contacts listed!";
     public static final String MESSAGE_LESSON_DOES_NOT_EXIST = "There is no lesson that matches the description";
     public static final String MESSAGE_TASKS_LISTED_OVERVIEW = "%1$d tasks listed!";

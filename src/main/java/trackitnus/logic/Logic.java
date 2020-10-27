@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 import javafx.collections.ObservableList;
 import trackitnus.commons.core.GuiSettings;
+import trackitnus.commons.core.index.Index;
 import trackitnus.logic.commands.CommandResult;
 import trackitnus.logic.commands.exceptions.CommandException;
 import trackitnus.logic.parser.exceptions.ParseException;
@@ -84,6 +85,13 @@ public interface Logic {
     // correct order
 
     /**
+     * @param code The module code to query
+     * @return the list of contacts for a specific module
+     */
+    ObservableList<Contact> getModuleContacts(Code code); // TODO: check if the list of contacts has been sorted in the
+    // correct order
+
+    /**
      * @return the list of all tasks that take place on and after the current day
      */
     ObservableList<Task> getUpcomingTasks();
@@ -93,6 +101,13 @@ public interface Logic {
      * @return the list of all tasks that take place on that specific day
      */
     ObservableList<Task> getDayUpcomingTasks(LocalDate date);
+
+    /**
+     * @param task The task to get index of
+     * @return the index of the task in all tasks
+     * @throws CommandException
+     */
+    Index getTaskIndex(Task task) throws CommandException;
 
     /**
      * Returns the user prefs' address book file path.
